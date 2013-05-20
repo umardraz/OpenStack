@@ -149,10 +149,12 @@ Status: Stable
 
 * Fill up the keystone database using the two available scripts
 
+::
+
    # Modify the HOST_IP and HOST_IP_EXT variables before executing the scripts
 
-   wget https://raw.github.com/mseknibilel/OpenStack-Grizzly-Install-Guide/master/KeystoneScripts/keystone_basic.sh
-   wget https://raw.github.com/mseknibilel/OpenStack-Grizzly-Install-Guide/master/KeystoneScripts/keystone_endpoints_basic.sh
+   wget https://github.com/umardraz/OpenStack/blob/master/keystone_basic.sh
+   wget https://github.com/umardraz/OpenStack/blob/master/keystone_basic.sh
 
    chmod +x keystone_basic.sh
    chmod +x keystone_endpoints_basic.sh
