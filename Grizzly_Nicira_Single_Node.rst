@@ -147,9 +147,9 @@ Status: Stable
    service keystone restart
    keystone-manage db_sync
 
-* Fill up the keystone database using the two scripts available in the `Scripts folder <https://github.com/mseknibilel/OpenStack-Grizzly-Install-Guide/tree/master/KeystoneScripts>`_ of this git repository::
+* Fill up the keystone database using the two available scripts
 
-   #Modify the HOST_IP and HOST_IP_EXT variables before executing the scripts
+   # Modify the HOST_IP and HOST_IP_EXT variables before executing the scripts
 
    wget https://raw.github.com/mseknibilel/OpenStack-Grizzly-Install-Guide/master/KeystoneScripts/keystone_basic.sh
    wget https://raw.github.com/mseknibilel/OpenStack-Grizzly-Install-Guide/master/KeystoneScripts/keystone_endpoints_basic.sh
