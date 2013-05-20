@@ -147,14 +147,12 @@ Status: Stable
    service keystone restart
    keystone-manage db_sync
 
-* Fill up the keystone database using the two available scripts
-
-::
+* Fill up the keystone database using the two available scripts::
 
    # Modify the HOST_IP and HOST_IP_EXT variables before executing the scripts
 
    wget https://github.com/umardraz/OpenStack/blob/master/keystone_basic.sh
-   wget https://github.com/umardraz/OpenStack/blob/master/keystone_basic.sh
+   wget https://github.com/umardraz/OpenStack/blob/master/keystone_endpoints_basic.sh
 
    chmod +x keystone_basic.sh
    chmod +x keystone_endpoints_basic.sh
