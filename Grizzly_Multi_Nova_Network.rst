@@ -255,56 +255,7 @@ Status: Stable
 
    glance image-list
 
-2.8. Quantum
--------------------
-
-* Install the Quantum server and the OpenVSwitch package collection::
-
-   apt-get install -y quantum-server
-
-* Edit the OVS plugin configuration file /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini with:: 
-
-   #Under the database section
-   [DATABASE]
-   sql_connection = mysql://quantumUser:quantumPass@10.10.10.51/quantum
-
-   #Under the OVS section
-   [OVS]
-   tenant_network_type = gre
-   tunnel_id_ranges = 1:1000
-   enable_tunneling = True
-
-   #Firewall driver for realizing quantum security group function
-   [SECURITYGROUP]
-   firewall_driver = quantum.agent.linux.iptables_firewall.OVSHybridIptablesFirewallDriver
-
-* Edit /etc/quantum/api-paste.ini ::
-
-   [filter:authtoken]
-   paste.filter_factory = keystoneclient.middleware.auth_token:filter_factory
-   auth_host = 10.10.10.51
-   auth_port = 35357
-   auth_protocol = http
-   admin_tenant_name = service
-   admin_user = quantum
-   admin_password = service_pass
-
-* Update the /etc/quantum/quantum.conf::
-
-   [keystone_authtoken]
-   auth_host = 10.10.10.51
-   auth_port = 35357
-   auth_protocol = http
-   admin_tenant_name = service
-   admin_user = quantum
-   admin_password = service_pass
-   signing_dir = /var/lib/quantum/keystone-signing
-
-* Restart the quantum server::
-
-   service quantum-server restart
-
-2.9. Nova
+2.8. Nova
 ------------------
 
 * Start by installing nova components::
