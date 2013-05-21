@@ -260,7 +260,7 @@ Status: Stable
 
 * Start by installing nova components::
 
-   apt-get install -y nova-api nova-cert novnc nova-consoleauth nova-scheduler nova-novncproxy nova-doc nova-conductor
+   apt-get install -y nova-api nova-cert novnc nova-consoleauth nova-scheduler nova-novncproxy nova-network nova-doc nova-conductor
 
 * Now modify authtoken section in the /etc/nova/api-paste.ini file to this::
 
